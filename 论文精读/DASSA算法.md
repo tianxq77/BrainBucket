@@ -525,17 +525,4 @@ w(y_a, y_b) = \sqrt{\frac{1}{9} + \frac{1}{9} + \frac{4}{9}} = \sqrt{\frac{6}{9}
 
 ---
 
-#### **6. 运行示例**
-
-```bash
-python main.py ./data/test/ 'D:/Program Files/matlabR2020b/bin/matlab' 2 86400 3 0 ALP
-```
-
----
-
-#### **7. 注意事项**
-
-- **文件路径**: 确保指定的数据文件（如 `P_Xtilde_Y.txt`, `Ytilde.txt` 等）已经存在，并且路径正确。
-- **Matlab 版本**: 该代码依赖 Matlab 进行预处理，确保 Matlab 环境配置正确。
-- **内存要求**: 在处理大规模数据时，可能需要较大的内存资源，确保系统能够支持大数据量的计算。
 
