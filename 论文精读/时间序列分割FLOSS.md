@@ -1,3 +1,134 @@
+# **时间序列分割FLOSS/FLUSS**
+
+源码地址：[https://sites.google.com/site/onlinesemanticsegmentation/](https://sites.google.com/site/onlinesemanticsegmentation/)
+
+Matrix Profile矩阵剖面在时间序列分割领域的应用
+
+处理单变量时间序列
+
+**超参数**:子序列长度L和分段数k
+
+随后，Eamonn Keogh将该算法扩展至能够处理[多元时间序列](https://zhida.zhihu.com/search?content_id=194430553&content_type=Article&match_order=1&q=%E5%A4%9A%E5%85%83%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97&zhida_source=entity)的分割问题，相关成果并发表在DMKD 2019'的文章《Domain agnostic online semantic segmentation for multi-dimensional time series》上。
+
+## 0\. Matrix Profile用于All-pairs similarity search
+
+Matrix Profile是一种通用的时间序列挖掘工具，其可用于多种用途，包括异常检测（anomaly detection），主题发现（Motif Discovery），分类（Classification）以及分割（segmentation）等等。
+
+- Matrix Profile
+    
+    给定原始单变量时间序列 T=t1,..,ti,..,tn以及子序列长度 m ，通过Matrix Profile可以得到用于记录每个位置子序列与其最近邻的欧氏距离的 MP 以及记录每个位置子序列的最近邻是谁的 MPIndex 。MP[i]越大，表示与T_{i,m}为最近邻的子序列与其距离越大，即其子序列与其不够相似，合理怀疑i点出现了异常
+    
+
+- All-pairs similarity search
+    
+    是一种常见的算法和数据处理技术，尤其在信息检索、数据挖掘和机器学习中，主要用于查找一组数据中所有元素之间的相似性。其基本任务是计算每一对数据元素之间的相似度，并返回所有符合一定标准的配对。
+    
+
+## 1\. 基于Matrix Profile的单变量时间序列分段算法FLUSS
+
+### 1.1 定义
+
+- 弧（Arc）：由子序列指向其最近邻子序列
+- 弧曲线AC（Arc Curve）：原时间序列的伴生时间序列，AC[i]表示跨过i点的弧数量，首尾的AC=0
+- 理想弧曲线 IAC （Idealized Arc Curve）：完全随机的单变量时间序列的AC，高为$n/2$ 的抛物线
+    
+- 修正后弧曲线 CAC （Corrected Arc Crossings）：依靠理想弧曲线 IAC 进行补偿,所有值都在0到1的范围，并且端点自然低值的问题也得到了修正[image]
+
+### 1.2 算法
+
+获得原始时间序列的 CAC ，给定k ，查找 CAC 对应的 k 个最低谷值的位置，即可确定 k 个分段点的位置。
+
+通常情况下，一个最低谷值周围的值通常也是低的。为避免这种影响，设置了搜索禁区，在最低谷值周围的搜索禁区中（五倍子序列长度），不得再次搜索最低谷值。
+
+* * *
+
+## 0.摘要
+
+不需要学习参数、不需要数据显性可分段、可处理在线问题
+
+## 1.引言
+
+贡献
+
+- FLOSS（Fast Lowcost Online Semantic Segmentation）
+- 32个数据集
+- 新的评价指标
+
+## 2\. 背景
+
+时间序列T
+
+子序列Ti，L，从index =i开始的长度为L的子序列
+
+系统S
+
+Matrix Profile
+
+Floss局限性
+
+- 不涉及统计特征：本文处理的是子序列形状变化相似性
+- 不处理可以人工检查的数据：本文关注人眼难以辨别的状态变化
+- 不是分段线性近似
+- 不处理细分领域：本文关注的类似于将书分成章节的结构化内容，不处理依赖于特定领域（例如语音或语言处理）和大量标注数据的内容，如将一个长的音频流分成各个单词或音素（如语音识别）
+
+## 3\. semantic segmentation
+
+### 1\. **输入参数：**
+
+- **MPIndex**：矩阵剖面索引，是时间序列的每个位置的最近邻的索引。它表示了每个时间点对应的最近邻（即，具有最小距离的另一个子序列的索引）。这些索引用于计算**弧曲线（**
+- **L**：子序列长度
+
+### 2\. **输出参数：**
+
+- **CAC**：修正弧曲线（Corrected Arc Curve）。
+
+### 3\. **算法步骤：**
+
+#### Step 1: 初始化
+
+```
+n = length(MPIndex)
+AC = CAC = nnmark = zero initialize array of size n
+```
+
+- 计算矩阵剖面索引（MPIndex）长度 **n**，即时间序列的长度。
+- 初始化三个数组：`AC`（弧）、`CAC`（修正弧）、`nnmark`（标记数组）。
+
+#### Step 2: 计算标记数组 `nnmark`
+
+```
+for i=1:n
+    j = MPIndex[i]
+    nnmark[min(i,j)] = nnmark[min(i,j)] + 1
+    nnmark[max(i,j)] = nnmark[max(i,j)] - 1
+end
+```
+
+- 迭代每个时间点 **i**，并根据矩阵剖面索引 **MPIndex[i]** 获取对应的 **j**。
+- **nnmark[min(i, j)]** 和 **nnmark[max(i, j)]** 分别增加和减少标记值（避免重复计数）。地，`nnmark[i]` 表示从时间点 **i** 出发，未在时间i结束的到弧计数。
+
+#### Step 3: 计算实际弧交叉数 `AC`
+
+```
+numArcs = 0
+for i=1:n
+    numArcs = numArcs + nnmark[i]
+    AC[i] = numArcs
+end
+```
+
+- 通过累加 `nnmark` 数组中的值，`numArcs` 累加了每个时间点 i 之前出现，且未在时间i处结束的弧数（如果弧从i出发，则nums[i]+1,如果弧在nums[i]结束，nums[i]-1,累加则体现了从i前出发，未在i结束的所有弧计数）。
+
+
+
+
+
+
+
+
+
+
+
 ## **FLUSS 算法说明文档**
 ### **一. 基础知识**
 MATLAB 中的 `fft` 函数是计算离散傅里叶变换（DFT）及其逆变换（IFFT）的一种高效工具。该函数可以广泛用于信号处理、图像处理、频域分析等领域。在 MATLAB 中，`fft` 函数是内置的，不需要额外安装任何工具箱即可使用。
