@@ -1,0 +1,195 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram name="第 1 页" id="SNTcwBFilO49jZ1qiCRF">
+    <mxGraphModel dx="1194" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NddMT2bOObS83CM87okS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-1" target="NddMT2bOObS83CM87okS-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-1" value="创建初始种群&lt;br&gt;(大模开根据需求写代码)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=none;endFill=0;" parent="1" source="NddMT2bOObS83CM87okS-2" target="NddMT2bOObS83CM87okS-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-2" value="输入需求" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;" parent="1" vertex="1">
+          <mxGeometry x="619" y="110" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=none;endFill=0;" parent="1" source="NddMT2bOObS83CM87okS-1" target="NddMT2bOObS83CM87okS-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="629" y="173" as="sourcePoint" />
+            <mxPoint x="549" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-10" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="699" y="300" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-4" value="种群" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="NddMT2bOObS83CM87okS-10" vertex="1">
+          <mxGeometry width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-5" value="个体" style="rounded=0;whiteSpace=wrap;html=1;" parent="NddMT2bOObS83CM87okS-10" vertex="1">
+          <mxGeometry x="15" y="30" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-6" value="个体" style="rounded=0;whiteSpace=wrap;html=1;" parent="NddMT2bOObS83CM87okS-10" vertex="1">
+          <mxGeometry x="65" y="30" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-7" value="个体" style="rounded=0;whiteSpace=wrap;html=1;" parent="NddMT2bOObS83CM87okS-10" vertex="1">
+          <mxGeometry x="15" y="70" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-8" value="..." style="rounded=0;whiteSpace=wrap;html=1;" parent="NddMT2bOObS83CM87okS-10" vertex="1">
+          <mxGeometry x="65" y="70" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-12" target="NddMT2bOObS83CM87okS-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-12" value="个体协同进化反思" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=open;endFill=0;" parent="1" source="NddMT2bOObS83CM87okS-4" target="NddMT2bOObS83CM87okS-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="629" y="173" as="sourcePoint" />
+            <mxPoint x="549" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-14" value="1. 随机挑两个个体进行测试，评估期性能(比如最小化延期)&lt;div&gt;2. 把比较结果给到LLM，并生成改进建议&lt;br&gt;3. LLM根据改进建议生成新规则&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;" parent="1" vertex="1">
+          <mxGeometry x="139" y="280" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-15" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-14" target="NddMT2bOObS83CM87okS-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="549" y="490" as="sourcePoint" />
+            <mxPoint x="599" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-16" target="NddMT2bOObS83CM87okS-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-16" value="交叉" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=open;endFill=0;" parent="1" source="NddMT2bOObS83CM87okS-4" target="NddMT2bOObS83CM87okS-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="649" y="293" as="sourcePoint" />
+            <mxPoint x="549" y="322" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-18" value="1. 挑选性能好的两个个体&lt;div&gt;2.&amp;nbsp;LLM结合两个父代规则的代码、性能反馈及改进建议，生成融合二者优势的新规则&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;" parent="1" vertex="1">
+          <mxGeometry x="139" y="400" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-19" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-18" target="NddMT2bOObS83CM87okS-16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="333" as="sourcePoint" />
+            <mxPoint x="429" y="336" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-22" target="NddMT2bOObS83CM87okS-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-22" value="个体自我进化反思" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-23" value="1.&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;对每个个体在进化前后的性能变化进行分析&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;若性能下降，反射器LLM生成反向提示；&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;若提升，则提炼成功模式并生成强化提示&lt;/span&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;" parent="1" vertex="1">
+          <mxGeometry x="139" y="510" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-25" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-23" target="NddMT2bOObS83CM87okS-22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="448" as="sourcePoint" />
+            <mxPoint x="429" y="449" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=open;endFill=0;" parent="1" source="NddMT2bOObS83CM87okS-4" target="NddMT2bOObS83CM87okS-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="729" y="461" as="sourcePoint" />
+            <mxPoint x="569" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-27" target="NddMT2bOObS83CM87okS-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-27" value="集体进化反思" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-28" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;随着迭代进行，反射器LLM整合所有个体&lt;/div&gt;&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;的改进经验，形成全局优化策略.将集体&lt;/div&gt;&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;经验注入后续进化的初始提示，引导种群&lt;/div&gt;&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;向更优方向演进&lt;/div&gt;" style="shape=note;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;horizontal=1;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="139" y="620" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-29" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-28" target="NddMT2bOObS83CM87okS-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="557" as="sourcePoint" />
+            <mxPoint x="429" y="556" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-31" target="NddMT2bOObS83CM87okS-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-31" value="变异" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-33" value="&lt;div style=&quot;background-color: rgb(255, 255, 255); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;对表现最佳的个体进行定向变异，LLM&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;根据其代码和集体经验生成变体（如引入&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;随机扰动或组合新特征）。通过可控变异&lt;/div&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;增加种群多样性，避免早熟收敛。&lt;/div&gt;&lt;/div&gt;" style="shape=note;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;horizontal=1;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="139" y="730" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-34" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-33" target="NddMT2bOObS83CM87okS-31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="670" as="sourcePoint" />
+            <mxPoint x="429" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-35" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=open;endFill=0;" parent="1" source="NddMT2bOObS83CM87okS-4" target="NddMT2bOObS83CM87okS-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="709" y="407" as="sourcePoint" />
+            <mxPoint x="532" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="NddMT2bOObS83CM87okS-36" target="NddMT2bOObS83CM87okS-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="679" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-36" target="NddMT2bOObS83CM87okS-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-36" value="多轮进化保留性能好的" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="399" y="850" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;startFill=0;dashed=1;startArrow=open;endFill=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NddMT2bOObS83CM87okS-4" target="NddMT2bOObS83CM87okS-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="732" y="420" as="sourcePoint" />
+            <mxPoint x="509" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-41" target="NddMT2bOObS83CM87okS-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-41" value="输出好的个体（性能好的模型代码）" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="419" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NddMT2bOObS83CM87okS-43" target="NddMT2bOObS83CM87okS-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-43" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="449" y="70" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-45" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;fontColor=#F7F7F7;" parent="1" vertex="1">
+          <mxGeometry x="449" y="1070" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-47" value="1. 人要先根据需求与大模型互动确定符合需求的prompt(确定大模型在这个初始提示词下基本可以正常工作)&lt;div&gt;2. 工厂的基本模型需要提前建立&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;" parent="1" vertex="1">
+          <mxGeometry x="9" y="60" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-48" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-47" target="NddMT2bOObS83CM87okS-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="325" as="sourcePoint" />
+            <mxPoint x="429" y="327" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-49" value="1. 需要提前准备好测试环境(或者说仿真环境)，以及测试数据集" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=13;align=left;" parent="1" vertex="1">
+          <mxGeometry x="9" y="160" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NddMT2bOObS83CM87okS-50" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" source="NddMT2bOObS83CM87okS-49" target="NddMT2bOObS83CM87okS-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="119" y="210" as="sourcePoint" />
+            <mxPoint x="429" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
